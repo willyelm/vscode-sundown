@@ -1,0 +1,40 @@
+{
+    "name": "sundown",
+    "displayName": "Sundown Theme",
+    "description": "A Minimalist yet nice looking theme for coding",
+    "version": "0.0.2",
+    "publisher": "willyelm",
+    "license": "MIT",
+    "author": "Williams Medina <williams.medinaa@gmail.com>",
+    "engines": {
+        "vscode": "^1.47.0"
+    },
+    "categories": [
+        "Themes"
+    ],
+    "contributes": {
+        "themes": [
+            {
+                "label": "Dark (Sundown)",
+                "uiTheme": "vs-dark",
+                "path": "./themes/dark/dark-theme.json"
+            }
+        ],
+        "iconThemes": [
+            {
+              "id": "sundown",
+              "label": "File Icons (Sundown)",
+              "path": "./fileicons/fileicons-theme.json"
+            }
+          ]
+    },
+    "devDependencies": {
+        "@types/node": "^14.0.27",
+        "ts-node": "^8.10.2",
+        "typescript": "^3.9.7",
+        "xml2js": "^0.4.23"
+    },
+    "scripts": {
+        "build": "rm -Rf ./fileicons && mkdir -p ./fileicons/24/icons && ts-node ./scripts/build"
+    }
+}

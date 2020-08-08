@@ -1,0 +1,105 @@
+[
+  {
+    "definition": "Typescript",
+    "fileExtensions": "ts",
+    "languageIds": "ts",
+    "fileNames": ""
+  },
+  {
+    "definition": "Swift",
+    "fileExtensions": "swift",
+    "languageIds": "swift"
+  },
+  {
+    "definition": "Javascript",
+    "fileExtensions": "js",
+    "languageIds": "javascript"
+  },{
+    "definition": "Java",
+    "fileExtensions": "java",
+    "languageIds": "java"
+  },
+  {
+    "definition": "HTML",
+    "fileExtensions": "html",
+    "languageIds": "html"
+  },
+  {
+    "definition": "Image",
+    "fileExtensions": ["jpg", "jpeg", "png", "gif", "svg"],
+    "languageIds": ["jpg", "jpeg", "png", "gif", "svg"]
+  },
+  {
+    "definition": "CSS",
+    "fileExtensions": "css",
+    "languageIds": "css"
+  },
+  {
+    "definition": "Sass",
+    "fileExtensions": ["scss", "sass"],
+    "languageIds": ["scss", "sass"]
+  },
+  {
+    "definition": "JSON",
+    "fileExtensions": "json",
+    "languageIds": "json"
+  },
+  {
+    "definition": "Markdown",
+    "fileExtensions": "md",
+    "languageIds": "markdown"
+  },
+  {
+    "definition": "Ruby",
+    "fileExtensions": "rb",
+    "languageIds": "ruby"
+  },
+  {
+    "definition": "Rust",
+    "fileExtensions": ["rs", "rlib"],
+    "languageIds": ["rs", "rlib"]
+  },
+  {
+    "definition": "PHP",
+    "fileExtensions": "php",
+    "languageIds": "php"
+  },
+  {
+    "definition": "NPM",
+    "fileNames": [ "package.json", "package-lock.json" ]
+  },
+  {
+    "definition": "Yarn",
+    "fileNames": "yarn.lock"
+  },
+  {
+    "definition": "Docker",
+    "fileNames": ["Dockerfile", "dockerfile", "docker-compose.yml"],
+    "languageIds": "dockerfile"
+  },
+  {
+    "definition": "Bash",
+    "fileExtensions": "sh",
+    "languageIds": "shellscript"
+  },
+  {
+    "definition": "C",
+    "fileExtensions": "c",
+    "languageIds": "c"
+  },
+  {
+    "definition": "CPP",
+    "fileExtensions": "cpp",
+    "languageIds": "cpp"
+  },
+  {
+    "definition": "CSharp",
+    "fileExtensions": "cs",
+    "languageIds": "csharp"
+  },
+  {
+    "definition": "Python",
+    "fileExtensions": "py",
+    "languageIds": "python"
+  }
+]

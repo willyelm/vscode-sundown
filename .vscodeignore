@@ -1,0 +1,6 @@
+.vscode/**
+.vscode-test/**
+.DS_Store
+.gitignore
+node_modules
+vsc-extension-quickstart.md
