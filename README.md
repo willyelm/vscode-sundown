@@ -1,13 +1,18 @@
-# README
-## This is the README for your extension "sundown"
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
+# Sundown Theme
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
+A Minimalist yet nice looking theme for coding
 
-### For more information
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+## File Icons
 
-**Enjoy!**
+![icons-preview](https://raw.githubusercontent.com/willyelm/vscode-sundown
+/master/images/icons-preview.png)
+
+## UI Theme
+
+![ui-preview](https://raw.githubusercontent.com/willyelm/vscode-sundown
+/master/images/ui-preview.png)
+
+## Syntax Theme
+
+![syntax-preview](https://raw.githubusercontent.com/willyelm/vscode-sundown
+/master/images/syntax-preview.png)

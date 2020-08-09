@@ -1,40 +1,63 @@
 {
-    "name": "sundown",
-    "displayName": "Sundown Theme",
-    "description": "A Minimalist yet nice looking theme for coding",
-    "version": "0.0.2",
-    "publisher": "willyelm",
-    "license": "MIT",
-    "author": "Williams Medina <williams.medinaa@gmail.com>",
-    "engines": {
-        "vscode": "^1.47.0"
-    },
-    "categories": [
-        "Themes"
+  "name": "sundown",
+  "displayName": "Sundown Theme",
+  "description": "A Minimalist yet nice looking theme for coding",
+  "version": "0.0.2",
+  "publisher": "willyelm",
+  "license": "MIT",
+  "author": "Williams Medina <williams.medinaa@gmail.com>",
+  "engines": {
+    "vscode": "^1.47.0"
+  },
+  "categories": [
+    "Themes",
+    "Other"
+  ],
+	"activationEvents": [
+    "*",
+		"onCommand:sundown.helloWorld"
+	],
+	"main": "./extension/sundown.extension.js",
+  "contributes": {
+    "commands": [
+			{
+				"command": "sundown.helloWorld",
+				"title": "Hello World"
+			}
+		],
+    "themes": [
+      {
+        "label": "Dark (Sundown)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/dark-theme.json"
+      },
+      {
+        "label": "Metal (Sundown)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/dark/metal-theme.json"
+      }
     ],
-    "contributes": {
-        "themes": [
-            {
-                "label": "Dark (Sundown)",
-                "uiTheme": "vs-dark",
-                "path": "./themes/dark/dark-theme.json"
-            }
-        ],
-        "iconThemes": [
-            {
-              "id": "sundown",
-              "label": "File Icons (Sundown)",
-              "path": "./fileicons/fileicons-theme.json"
-            }
-          ]
-    },
-    "devDependencies": {
-        "@types/node": "^14.0.27",
-        "ts-node": "^8.10.2",
-        "typescript": "^3.9.7",
-        "xml2js": "^0.4.23"
-    },
-    "scripts": {
-        "build": "rm -Rf ./fileicons && mkdir -p ./fileicons/24/icons && ts-node ./scripts/build"
-    }
+    "iconThemes": [
+      {
+        "id": "sundown",
+        "label": "File Icons (Sundown)",
+        "path": "./fileicons/fileicons-theme.json"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.27",
+    "@types/vscode": "^1.47.0",
+    "@types/glob": "^7.1.1",
+    "@types/mocha": "^7.0.2",
+    "ts-node": "^8.10.2",
+    "typescript": "^3.9.7",
+    "xml2js": "^0.4.23"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+		"compile": "npm run compile:theme && npm run compile:extension",
+		"compile:extension": "tsc -p ./src && find ./src -name '*.css' -exec cp {} ./extension \\;",
+    "compile:theme": "rm -Rf ./fileicons && mkdir -p ./fileicons/24/icons && ts-node ./scripts/build"
+  }
 }

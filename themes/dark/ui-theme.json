@@ -1,0 +1,31 @@
+{
+	"$schema": "vscode://schemas/color-theme",
+	"name": "Sundown Dark Default Colors",
+	"colors": {
+		"editor.background": "#262629",
+		"editorWidget.background": "#202022",
+		"sideBar.background": "#202022",
+		"menu.background": "#202022",
+		"activityBar.background": "#202022",
+		"sideBarSectionHeader.background": "#202022",
+
+		"panel.border": "#292d35",
+		"editorGroupHeader.tabsBorder": "#292d35",
+		"tab.border": "#292d35",
+		"activityBar.border": "#292d35",
+		"statusBar.border": "#292d35",
+		"titleBar.border": "#292d35",
+		"sideBar.border": "#292d35",
+		"sideBarSectionHeader.border": "#292d35",
+		"editorWidget.border": "#292d35",
+
+		"editor.foreground": "#eeeff3",
+		"sideBarTitle.foreground": "#eeeff3",
+		"menu.foreground": "#eeeff3",
+		"input.placeholderForeground": "#c2c2c7",
+
+		"list.activeSelectionBackground": "#d19e09",
+		"activityBarBadge.background": "#fbb825"
+	},
+	"semanticHighlighting": true
+}

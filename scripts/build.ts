@@ -183,7 +183,7 @@ function merge (...items) {
   return master;
 }
 
-async function build () {
+async function buildIconTheme() {
   const iconTheme = {};
   const icons = await buildIcons(24);
   const fileIcons = await buildFileIcons(24, 16, 16, 5, 10.05);
@@ -196,4 +196,4 @@ async function build () {
   await writeFile(themePath, JSON.stringify(iconTheme, null, 2));
 }
 
-build();
+buildIconTheme();
