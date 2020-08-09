@@ -4,12 +4,12 @@ A Minimalist yet nice looking theme for coding
 
 ## File Icons
 
-![icons-preview](https://raw.githubusercontent.com/willyelm/vscode-sundown/master/images/icons.png)
-
-## UI Theme
-
-![ui-preview](https://raw.githubusercontent.com/willyelm/vscode-sundown/master/images/ui.png)
+![icons](https://raw.githubusercontent.com/willyelm/vscode-sundown/master/images/icons.png)
 
 ## Syntax Theme
 
-![syntax-preview](https://raw.githubusercontent.com/willyelm/vscode-sundown/master/images/syntax.png)
+![syntax](https://raw.githubusercontent.com/willyelm/vscode-sundown/master/images/syntax.png)
+
+## UI Theme
+
+![ui](https://raw.githubusercontent.com/willyelm/vscode-sundown/master/images/ui.png)
