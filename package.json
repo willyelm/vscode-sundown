@@ -2,7 +2,7 @@
   "name": "sundown",
   "displayName": "Sundown Theme",
   "description": "A Minimalist yet nice looking theme for coding",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "publisher": "willyelm",
   "license": "MIT",
   "author": "Williams Medina <williams.medinaa@gmail.com>",
@@ -17,6 +17,8 @@
     "Themes",
     "Other"
   ],
+  "main": "extension/sundown.extension.js",
+  "icon": "icon.png",
   "contributes": {
     "themes": [
       {
@@ -50,7 +52,7 @@
   "scripts": {
     "vscode:prepublish": "npm run compile",
 		"compile": "npm run compile:theme && npm run compile:extension",
-		"compile:extension": "tsc -p ./src && find ./src -name '*.css' -exec cp {} ./extension \\;",
+		"compile:extension": "tsc -p tsconfig.extension.json",
     "compile:theme": "rm -Rf ./fileicons && mkdir -p ./fileicons/24/icons && ts-node ./scripts/build"
   }
 }

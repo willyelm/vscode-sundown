@@ -2,3 +2,4 @@ node_modules
 fileicons
 .DS_Store
 scripts/**/*.png
+*.vsix
