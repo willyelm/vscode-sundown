@@ -11,7 +11,8 @@
             "request": "launch",
             "runtimeExecutable": "${execPath}",
             "args": [
-                "/Users/williamsmedina/Github/ssnc-uikit",
+                "/Users/williamsmedina/Github/IconTest",
+                "/Users/williamsmedina/Github/sundown",
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ]
         }
