@@ -11,8 +11,8 @@
             "request": "launch",
             "runtimeExecutable": "${execPath}",
             "args": [
-                "/Users/williamsmedina/Github/IconTest",
-                "/Users/williamsmedina/Github/sundown",
+                "${workspaceFolder}",
+                // "/Users/williamsmedina/Github/IconTest",
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ]
         }

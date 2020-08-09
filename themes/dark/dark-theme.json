@@ -6,7 +6,7 @@
 		"name": "Comment",
 		"scope": "comment",
 		"settings": {
-				"foreground": "#7f8c98"
+				"foreground": "#7c7c8a"
 		}
 	}, {
 		"name": "Foreground, Operator",
@@ -39,7 +39,7 @@
 		"name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
 		"scope": "constant.numeric, constant.language, support.constant, constant.character, punctuation.section.embedded, keyword.other.unit",
 		"settings": {
-				"foreground": "#FFC58F"
+				"foreground": "#f1aa67"
 		}
 	},{
 		"name": "Class, Support",
@@ -51,7 +51,7 @@
 		],
 		"settings": {
 			"fontStyle": "",
-			"foreground": "#e4e283"
+			"foreground": "#e2d37a"
 		}
 	}, {
 		"name": "String, Symbols, Inherited Class, Markup Heading, GitGutter inserted",
@@ -64,7 +64,7 @@
 		],
 		"settings": {
 				"fontStyle": "",
-				"foreground": "#abe0ca"
+				"foreground": "#8fd4b7"
 		}
 	}, {
 		"name": "Operator, Misc",
@@ -77,7 +77,7 @@
 		"scope": "entity.name.function, meta.function-call, support.function, keyword.other.special-method, meta.block-level, markup.changed.git_gutter",
 		"settings": {
 			"fontStyle": "",
-			"foreground": "#999fee"
+			"foreground": "#898fd8"
 		}
 	}, {
 		"name": "Keyword, Storage",
@@ -111,82 +111,6 @@
 		"settings": {
 				"fontStyle": "",
 				"foreground": "#D2DDE2"
-		}
-	}, {
-		"name": "Diff foreground",
-		"scope": "markup.inserted.diff, markup.deleted.diff, meta.diff.header.to-file, meta.diff.header.from-file",
-		"settings": {
-				"foreground": "#D2DDE2"
-		}
-	}, {
-		"name": "Diff insertion",
-		"scope": "markup.inserted.diff, meta.diff.header.to-file",
-		"settings": {
-				"foreground": "#aec459"
-		}
-	}, {
-		"name": "Diff deletion",
-		"scope": "markup.deleted.diff, meta.diff.header.from-file",
-		"settings": {
-				"foreground": "#f76f7a"
-		}
-	}, {
-		"name": "Diff header",
-		"scope": "meta.diff.header.from-file, meta.diff.header.to-file",
-		"settings": {
-				"foreground": "#D2DDE2"
-		}
-	}, {
-		"name": "Diff range",
-		"scope": "meta.diff.range",
-		"settings": {
-				"fontStyle": "italic",
-				"foreground": "#3e999f"
-		}
-	}, {
-		"name": "Markup Quote",
-		"scope": "markup.quote",
-		"settings": {
-				"foreground": "#FFC58F"
-		}
-	}, {
-		"name": "Markup Lists",
-		"scope": "markup.list",
-		"settings": {
-				"foreground": "#BBDAFF"
-		}
-	}, {
-		"name": "Markup Styling",
-		"scope": "markup.bold, markup.italic",
-		"settings": {
-				"foreground": "#FFC58F"
-		}
-	}, {
-		"name": "Markup Inline",
-		"scope": "markup.inline.raw",
-		"settings": {
-				"fontStyle": "",
-				"foreground": "#fcb8bd"
-		}
-	}, {
-		"scope": "token.info-token",
-		"settings": {
-				"foreground": "#91b8fa"
-		}
-	}, {
-		"scope": "token.warn-token",
-		"settings": {
-				"foreground": "#f5b664"
-		}
-	}, {
-		"scope": "token.error-token",
-		"settings": {
-				"foreground": "#ec5c5f"
-		}
-	}, {
-		"scope": "token.debug-token",
-		"settings": {
-				"foreground": "#b267e6"
 		}
 	}],
 	"semanticTokenColors": {

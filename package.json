@@ -9,22 +9,15 @@
   "engines": {
     "vscode": "^1.47.0"
   },
+  "repository": {
+    "url": "https://github.com/willyelm/vscode-sundown.git",
+    "type": "git"
+  },
   "categories": [
     "Themes",
     "Other"
   ],
-	"activationEvents": [
-    "*",
-		"onCommand:sundown.helloWorld"
-	],
-	"main": "./extension/sundown.extension.js",
   "contributes": {
-    "commands": [
-			{
-				"command": "sundown.helloWorld",
-				"title": "Hello World"
-			}
-		],
     "themes": [
       {
         "label": "Dark (Sundown)",

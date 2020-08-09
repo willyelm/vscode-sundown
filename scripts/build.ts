@@ -1,3 +1,8 @@
+/**
+ * Builder
+ * @author Williams Medina <williams.medina@alpsinc.com>
+ */
+
 import * as fs from 'fs';
 import { promisify } from 'util';
 import * as path from 'path';
