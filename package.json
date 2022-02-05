@@ -2,7 +2,7 @@
   "name": "sundown",
   "displayName": "Sundown Theme",
   "description": "A Minimalist yet nice looking theme for coding",
-  "version": "0.0.4",
+  "version": "0.0.12",
   "publisher": "willyelm",
   "license": "MIT",
   "author": "Williams Medina <williams.medinaa@gmail.com>",
@@ -17,26 +17,30 @@
     "Themes",
     "Other"
   ],
-  "main": "extension/sundown.extension.js",
-  "icon": "icon.png",
+  "icon": "images/icon.png",
   "contributes": {
     "themes": [
       {
         "label": "Dark (Sundown)",
         "uiTheme": "vs-dark",
-        "path": "./themes/dark/dark-theme.json"
+        "path": "./themes/dark-color-theme.json"
       },
       {
         "label": "Metal (Sundown)",
         "uiTheme": "vs-dark",
-        "path": "./themes/dark/metal-theme.json"
+        "path": "./themes/metal-color-theme.json"
       }
     ],
     "iconThemes": [
       {
-        "id": "sundown",
-        "label": "File Icons (Sundown)",
-        "path": "./fileicons/fileicons-theme.json"
+        "id": "sundown-color",
+        "label": "Color (Sundown)",
+        "path": "./fileicons/color-icon-theme.json"
+      },
+      {
+        "id": "sundown-dark",
+        "label": "Dark (Sundown)",
+        "path": "./fileicons/dark-icon-theme.json"
       }
     ]
   },
@@ -51,8 +55,7 @@
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
-		"compile": "npm run compile:theme && npm run compile:extension",
-		"compile:extension": "tsc -p tsconfig.extension.json",
-    "compile:theme": "rm -Rf ./fileicons && mkdir -p ./fileicons/24/icons && ts-node ./scripts/build"
+		"compile": "npm run compile:theme",
+    "compile:theme": "rm -Rf ./fileicons && mkdir -p ./fileicons && ts-node ./scripts/build"
   }
 }

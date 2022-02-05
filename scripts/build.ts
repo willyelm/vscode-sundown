@@ -2,7 +2,6 @@
  * Builder
  * @author Williams Medina <williams.medina@alpsinc.com>
  */
-
 import * as fs from 'fs';
 import { promisify } from 'util';
 import * as path from 'path';
@@ -12,56 +11,53 @@ const readFile = promisify(fs.readFile);
 const writeFile = promisify(fs.writeFile);
 const XMLBuilder = new Builder();
 const XMLParse = promisify(parseString);
+const fileTokens = require('./file-tokens.json');
 
-async function buildIcons (resolution: number) {
+async function buildIcons (ns: string, resolution: number) {
   const icons = {
     'iconDefinitions': {
-      'Sundown.Folder': {
-        "iconPath": `./${resolution}/Folder.svg`
+      [`sundown.${ns}.folder`]: {
+        "iconPath": `./${ns}-${resolution}-Folder.svg`
       },
-      'Sundown.Project': {
-        "iconPath": `./${resolution}/Project.svg`
+      [`sundown.${ns}.project`]: {
+        "iconPath": `./${ns}-${resolution}-Project.svg`
       },
-      'Sundown.File': {
-        "iconPath": `./${resolution}/File.svg`
+      [`sundown.${ns}.file`]: {
+        "iconPath": `./${ns}-${resolution}-File.svg`
       },
-      'Sundown.Archive': {
-        "iconPath": `./${resolution}/Archive.svg`
+      [`sundown.${ns}.archive`]: {
+        "iconPath": `./${ns}-${resolution}-Archive.svg`
       }
     },
     'fileExtensions': {
-      'zip': 'Sundown.Archive',
-      'rar': 'Sundown.Archive',
-      'tar': 'Sundown.Archive',
-      'sbx': 'Sundown.Archive',
-      'gz': 'Sundown.Archive',
-      'gzip': 'Sundown.Archive',
-      '7z': 'Sundown.Archive',
-      's7z': 'Sundown.Archive'
+      'zip': `sundown.${ns}.archive`,
+      'rar': `sundown.${ns}.archive`,
+      'tar': `sundown.${ns}.archive`,
+      'sbx': `sundown.${ns}.archive`,
+      'gz': `sundown.${ns}.archive`,
+      'gzip': `sundown.${ns}.archive`,
+      '7z': `sundown.${ns}.archive`,
+      's7z': `sundown.${ns}.archive`
     },
-    'rootFolder': 'Sundown.Project',
-    'rootFolderExpanded': 'Sundown.Project',
-    'folder': 'Sundown.Folder',
-    'folderExpanded': 'Sundown.Folder',
-    'file': 'Sundown.File'
+    'rootFolder': `sundown.${ns}.project`,
+    'rootFolderExpanded': `sundown.${ns}.project`,
+    'folder': `sundown.${ns}.folder`,
+    'folderExpanded': `sundown.${ns}.folder`,
+    'file': `sundown.${ns}.file`
   };
-  // Copy Icons
-  await copy(
-    path.resolve(__dirname, `icons/File.svg`), 
-    path.resolve(`fileicons/${resolution}/File.svg`)
-  )
-  await copy(
-    path.resolve(__dirname, `icons/Folder.svg`), 
-    path.resolve(`fileicons/${resolution}/Folder.svg`)
-  )
-  await copy(
-    path.resolve(__dirname, `icons/Project.svg`), 
-    path.resolve(`fileicons/${resolution}/Project.svg`)
-  )
-  await copy(
-    path.resolve(__dirname, `icons/Archive.svg`), 
-    path.resolve(`fileicons/${resolution}/Archive.svg`)
-  )
+  const fileNames = [
+    'Archive',
+    'File',
+    'Folder',
+    'Project'
+  ]
+  for(const name of fileNames) {
+    // Copy Icons
+    await copy(
+      path.resolve(__dirname, `icons/${ns}-${name}.svg`), 
+      path.resolve(`fileicons/${ns}-${resolution}-${name}.svg`)
+    )
+  }
   return icons;
 }
 
@@ -69,6 +65,7 @@ async function copy (target: string, dest: string) {
   return fs
     .createReadStream(target)
     .pipe(fs.createWriteStream(dest));
+    
 }
 
 async function readSVG (filePath: string, options?: any) {
@@ -90,6 +87,7 @@ async function readSVG (filePath: string, options?: any) {
 }
 
 async function buildFileIcons (
+  ns: string,
   resolution: number,
   containerWidth: number,
   containerHeight: number,
@@ -102,14 +100,12 @@ async function buildFileIcons (
     'fileNames': {},
     'languageIds': {}
   }
-  const fileTokens = require('./file-tokens.json');
-  const filePath = path.resolve(__dirname, `icons/File.svg`);
-  
+  const filePath = path.resolve(__dirname, `icons/${ns}-File.svg`);
   await fileTokens.reduce((promise, token) => {
     return promise.then(() => { 
       return new Promise(async (resolve) => {
         const fileSVG = await readSVG(filePath);
-        const fileIconPath = path.resolve(__dirname, `icons/languages/${token.definition}.svg`);
+        const fileIconPath = path.resolve(__dirname, `languages/${ns}-${token.definition}.svg`);
         const fileIconSVG = await readSVG(fileIconPath, {
           idPrefix: token.definition 
         });
@@ -143,12 +139,12 @@ async function buildFileIcons (
         })
         // Save File
         const fileXMLContent = XMLBuilder.buildObject(fileSVG);
-        const fileXMLPath = path.resolve(`fileicons/${resolution}/icons/${token.definition}.svg`);
+        const fileXMLPath = path.resolve(`fileicons/${ns}-${resolution}-${token.definition}.svg`);
         await writeFile(fileXMLPath, fileXMLContent);
         // Add Definitions
-        const iconTokenName = `Sundown.File.${token.definition}`;
+        const iconTokenName = `sundown.${ns}.file.${token.definition}`;
         fileIcons.iconDefinitions[iconTokenName] = {
-          iconPath: `./${resolution}/icons/${token.definition}.svg`
+          iconPath: `./${ns}-${resolution}-${token.definition}.svg`
         };
         const definitions = ['fileExtensions', 'languageIds', 'fileNames'];
         definitions.forEach((item: string) => {
@@ -156,8 +152,8 @@ async function buildFileIcons (
           const items = Array.isArray(token[item]) ? token[item] : [token[item]];
           items.forEach(async (definition: string) => {
             fileIcons[item][definition] = iconTokenName;
-            const fileTypePath = path.resolve(`fileicons/${resolution}/icons/${token.definition}.${definition}`);
-            await writeFile(fileTypePath, '');
+            // const fileTypePath = path.resolve(`fileicons/${ns}-${resolution}-${token.definition}.${definition}`);
+            // await writeFile(fileTypePath, '');
           });
         });
         resolve(fileSVG);
@@ -188,17 +184,27 @@ function merge (...items) {
   return master;
 }
 
-async function buildIconTheme() {
-  const iconTheme = {};
-  const icons = await buildIcons(24);
-  const fileIcons = await buildFileIcons(24, 16, 16, 5, 10.05);
-  merge(
-    iconTheme, 
-    icons,
-    fileIcons
-  );
-  const themePath = path.resolve(`fileicons/fileicons-theme.json`);
-  await writeFile(themePath, JSON.stringify(iconTheme, null, 2));
+async function build() {
+  // Color icons
+  const themeNames = ['color', 'dark'];
+  for (const name of themeNames) {
+    const iconTheme = {};
+    const icons = await buildIcons(name, 24);
+    const fileIcons = await buildFileIcons(
+        name,
+        32, 
+        32, 
+        32, 
+        26, 
+        30);
+    merge(
+      iconTheme, 
+      icons,
+      fileIcons
+    );
+    const themePath = path.resolve(`fileicons/${name}-icon-theme.json`);
+    await writeFile(themePath, JSON.stringify(iconTheme, null, 2));
+  }
 }
 
-buildIconTheme();
+build();

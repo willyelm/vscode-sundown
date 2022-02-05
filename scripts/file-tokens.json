@@ -1,9 +1,8 @@
 [
   {
     "definition": "Typescript",
-    "fileExtensions": "ts",
-    "languageIds": "ts",
-    "fileNames": ""
+    "fileExtensions": ["ts", "tsx"],
+    "languageIds": ["ts", "tsx"]
   },
   {
     "definition": "Swift",
@@ -12,7 +11,7 @@
   },
   {
     "definition": "Javascript",
-    "fileExtensions": "js",
+    "fileExtensions": ["js", "jsx"],
     "languageIds": "javascript"
   },{
     "definition": "Java",
@@ -26,8 +25,13 @@
   },
   {
     "definition": "Image",
-    "fileExtensions": ["jpg", "jpeg", "png", "gif", "svg"],
-    "languageIds": ["jpg", "jpeg", "png", "gif", "svg"]
+    "fileExtensions": ["jpg", "jpeg", "png", "gif"],
+    "languageIds": ["jpg", "jpeg", "png", "gif"]
+  },
+  {
+    "definition": "Vector",
+    "fileExtensions": ["svg"],
+    "languageIds": ["svg"]
   },
   {
     "definition": "CSS",
@@ -55,11 +59,6 @@
     "languageIds": "ruby"
   },
   {
-    "definition": "Rust",
-    "fileExtensions": ["rs", "rlib"],
-    "languageIds": ["rs", "rlib"]
-  },
-  {
     "definition": "PHP",
     "fileExtensions": "php",
     "languageIds": "php"
@@ -80,11 +79,6 @@
     "definition": "Docker",
     "fileNames": ["Dockerfile", "dockerfile", "docker-compose.yml"],
     "languageIds": "dockerfile"
-  },
-  {
-    "definition": "Bash",
-    "fileExtensions": "sh",
-    "languageIds": "shellscript"
   },
   {
     "definition": "C",

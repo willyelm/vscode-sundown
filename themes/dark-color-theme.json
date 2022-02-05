@@ -1,0 +1,123 @@
+{
+	"$schema": "vscode://schemas/color-theme",
+	"name": "Dark (Sundown)",
+	"include": "./dark-ui-theme.json",
+	"tokenColors": [{
+		"name": "Comment",
+		"scope": "comment",
+		"settings": {
+			"fontStyle": "italic",
+			"foreground": "#636367"
+		}
+	}, {
+		"name": "Foreground, Operator",
+		"scope": [
+			"keyword.operator.class",
+			"keyword.operator",
+			"constant.other",
+			"source.php.embedded.line"
+		],
+		"settings": {
+			"foreground": "#cce9ff"
+		}
+	}, {
+		"name": "Variable, String Link, Regular Expression, Tag Name, GitGutter deleted",
+		"scope": [
+			"variable", 
+			"support.other.variable", 
+			"string.other.link", 
+			"string.regexp", 
+			"entity.other.attribute-name", 
+			"meta.tag", 
+			"variable.parameter",
+			"declaration.tag", 
+			"markup.deleted.git_gutter"
+		],
+		"settings": {
+				"foreground": "#eff1f6f1"
+		}
+	}, {
+		"name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
+		"scope": "constant.numeric, constant.language, support.constant, constant.character, punctuation.section.embedded, keyword.other.unit",
+		"settings": {
+				"foreground": "#f1c499"
+		}
+	},{
+		"name": "Class, Support",
+		"scope": [
+			"entity.name.class", 
+			"entity.name.type", 
+			"support.type", 
+			"support.class"
+		],
+		"settings": {
+			"fontStyle": "",
+			"foreground": "#f8eaae"
+		}
+	}, {
+		"name": "String, Symbols, Inherited Class, Markup Heading, GitGutter inserted",
+		"scope": [
+			"string", 
+			"constant.other.symbol", 
+			"entity.other.inherited-class", 
+			"markup.heading", 
+			"markup.inserted.git_gutter"
+		],
+		"settings": {
+				"fontStyle": "",
+				"foreground": "#8dcab1"
+		}
+	}, {
+		"name": "Operator, Misc",
+		"scope": "keyword.operator, constant.other.color",
+		"settings": {
+				"foreground": "#a7def8"
+		}
+	}, {
+		"name": "Function, Special Method, Block Level, GitGutter changed",
+		"scope": "entity.name.function, meta.function-call, support.function, keyword.other.special-method, meta.block-level, markup.changed.git_gutter",
+		"settings": {
+			"fontStyle": "",
+			"foreground": "#a4acf5"
+		}
+	}, {
+		"name": "Keyword, Storage",
+		"scope": [
+			"keyword", 
+			"storage", 
+			"storage.type",
+			"entity.name.tag.css", 
+			"entity.name.tag"
+		],
+		"settings": {
+			"fontStyle": "bold",
+			"foreground": "#eff1f6"
+		}
+	}, {
+		"name": "Invalid",
+		"scope": "invalid",
+		"settings": {
+				"fontStyle": "",
+				"foreground": "#aeb3c2"
+		}
+	}, {
+		"name": "Separator",
+		"scope": "meta.separator",
+		"settings": {
+				"foreground": "#858892"
+		}
+	}, {
+		"name": "Deprecated",
+		"scope": "invalid.deprecated",
+		"settings": {
+				"fontStyle": "",
+				"foreground": "#D2DDE2"
+		}
+	}],
+	"semanticTokenColors": {
+		"newOperator": "#d4d4d4",
+		"stringLiteral": "#ce9178",
+		"customLiteral": "#D4D4D4",
+		"numberLiteral": "#b5cea8",
+	}
+}

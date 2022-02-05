@@ -12,7 +12,6 @@
             "runtimeExecutable": "${execPath}",
             "args": [
                 "${workspaceFolder}",
-                // "/Users/williamsmedina/Github/IconTest",
                 "--extensionDevelopmentPath=${workspaceFolder}"
             ]
         }
