@@ -11,10 +11,10 @@
 		"sideBarSectionHeader.background": "#1a1c22",
 		"debugToolBar.background": "#1a1c22", 
 		"statusBar.background": "#1a1c22", 
-		"widget.shadow": "#1a1c22", 
 		"editorGroupHeader.tabsBackground": "#1a1c22", 
 		"tab.inactiveBackground": "#1a1c22",
 		"editorRuler.foreground": "#1a1c22",
+		"widget.shadow": "#1a1c2200", 
 
 		"panel.border": "#0f0f10",
 		"editorGroupHeader.tabsBorder": "#0f0f10",
@@ -35,8 +35,11 @@
 		"input.border": "#0f0f10",
 		"button.border": "#0f0f10",
 		"input.background": "#0f0f10",
+		"panel.background": "#0f0f10",
 
+		"window.activeBorder": "#e8e9ed00",
 		"editor.foreground": "#e8e9ed",
+		"input.foreground": "#e8e9ed",
 		"sideBarTitle.foreground": "#e8e9ed",
 		"menu.foreground": "#e8e9ed",
 		"editorLineNumber.activeForeground": "#e8e9ed",
@@ -53,13 +56,14 @@
 
 		"gitDecoration.ignoredResourceForeground": "#dcdddf5e",
 		"editorLineNumber.foreground": "#dcdddf5e",
-		"input.placeholderForeground": "#292d355e",
+		"input.placeholderForeground": "#dcdddf5e",
 		"tab.inactiveForeground": "#dcdddf5e",
 
 		"focusBorder": "#dcdddf5e",
 		"list.activeSelectionBackground": "#ffffff13",
 
 		"editor.findMatchBackground": "#017aff",
+		"button.background": "#017aff",
 		"editor.findMatchBorder": "#017aff",
 		"editor.wordHighlightBackground": "#ffffff4b",
 		"editor.selectionHighlightBackground": "#e8e9ed34",

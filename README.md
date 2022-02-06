@@ -1,6 +1,6 @@
 # Sundown: VS Code Theme
-<!-- ![icons](https://raw.githubusercontent.com/willyelm/vscode-sundown/master/images/sundown-icon.png) -->
-![icons](./images/sundown-icon.png)
+
+![icons](https://raw.githubusercontent.com/willyelm/vscode-sundown/master/images/sundown-icon.png)
 
 A Minimalist yet nice looking theme for coding this extension includes 2 syntax/ui colors themes and 2 file icon themes: dark and metal.
 

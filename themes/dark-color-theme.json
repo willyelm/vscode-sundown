@@ -18,7 +18,7 @@
 			"source.php.embedded.line"
 		],
 		"settings": {
-			"foreground": "#cce9ff"
+			"foreground": "#ffffff"
 		}
 	}, {
 		"name": "Variable, String Link, Regular Expression, Tag Name, GitGutter deleted",
@@ -34,25 +34,25 @@
 			"markup.deleted.git_gutter"
 		],
 		"settings": {
-				"foreground": "#eff1f6f1"
+				"foreground": "#f2f2f6"
 		}
 	}, {
 		"name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
 		"scope": "constant.numeric, constant.language, support.constant, constant.character, punctuation.section.embedded, keyword.other.unit",
 		"settings": {
-				"foreground": "#f1c499"
+				"foreground": "#ffc0a2"
 		}
 	},{
 		"name": "Class, Support",
 		"scope": [
 			"entity.name.class", 
-			"entity.name.type", 
+			"entity.name.type",
 			"support.type", 
 			"support.class"
 		],
 		"settings": {
 			"fontStyle": "",
-			"foreground": "#f8eaae"
+			"foreground": "#f8efbb"
 		}
 	}, {
 		"name": "String, Symbols, Inherited Class, Markup Heading, GitGutter inserted",
@@ -65,20 +65,21 @@
 		],
 		"settings": {
 				"fontStyle": "",
-				"foreground": "#8dcab1"
+				"foreground": "#afd3c6"
 		}
 	}, {
 		"name": "Operator, Misc",
 		"scope": "keyword.operator, constant.other.color",
 		"settings": {
-				"foreground": "#a7def8"
+				"foreground": "#ffffff",
+				"fontStyle": "bold"
 		}
 	}, {
 		"name": "Function, Special Method, Block Level, GitGutter changed",
 		"scope": "entity.name.function, meta.function-call, support.function, keyword.other.special-method, meta.block-level, markup.changed.git_gutter",
 		"settings": {
 			"fontStyle": "",
-			"foreground": "#a4acf5"
+			"foreground": "#a2b0f3"
 		}
 	}, {
 		"name": "Keyword, Storage",
@@ -91,7 +92,7 @@
 		],
 		"settings": {
 			"fontStyle": "bold",
-			"foreground": "#eff1f6"
+			"foreground": "#f0a3ba"
 		}
 	}, {
 		"name": "Invalid",
