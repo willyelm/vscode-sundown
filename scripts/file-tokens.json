@@ -68,10 +68,6 @@
     "fileNames": [ ".npmrc", "package-lock.json" ]
   },
   {
-    "definition": "Node",
-    "fileNames": [ "package.json" ]
-  },
-  {
     "definition": "Yarn",
     "fileNames": "yarn.lock"
   },

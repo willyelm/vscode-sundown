@@ -2,7 +2,7 @@
   "name": "sundown",
   "displayName": "Sundown Theme",
   "description": "A Minimalist yet nice looking theme for coding",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "publisher": "willyelm",
   "license": "MIT",
   "author": "Williams Medina <williams.medinaa@gmail.com>",
@@ -24,8 +24,11 @@
         "label": "Dark (Sundown)",
         "uiTheme": "vs-dark",
         "path": "./themes/dark-color-theme.json"
-      },
-      {
+      }, {
+        "label": "Minimal Dark (Sundown)",
+        "uiTheme": "vs-dark",
+        "path": "./themes/minimal-dark-color-theme.json"
+      }, {
         "label": "Metal (Sundown)",
         "uiTheme": "vs-dark",
         "path": "./themes/metal-color-theme.json"

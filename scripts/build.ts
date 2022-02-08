@@ -27,6 +27,9 @@ async function buildIcons (ns: string, resolution: number) {
       },
       [`sundown.${ns}.archive`]: {
         "iconPath": `./${ns}-${resolution}-Archive.svg`
+      },
+      [`sundown.${ns}.package`]: {
+        "iconPath": `./${ns}-${resolution}-Package.svg`
       }
     },
     'fileExtensions': {
@@ -39,6 +42,10 @@ async function buildIcons (ns: string, resolution: number) {
       '7z': `sundown.${ns}.archive`,
       's7z': `sundown.${ns}.archive`
     },
+    "fileNames": {
+      'package.json': `sundown.${ns}.package`,
+      'Package.swift': `sundown.${ns}.package`
+    },
     'rootFolder': `sundown.${ns}.project`,
     'rootFolderExpanded': `sundown.${ns}.project`,
     'folder': `sundown.${ns}.folder`,
@@ -49,7 +56,8 @@ async function buildIcons (ns: string, resolution: number) {
     'Archive',
     'File',
     'Folder',
-    'Project'
+    'Project',
+    'Package'
   ]
   for(const name of fileNames) {
     // Copy Icons
