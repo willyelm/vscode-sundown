@@ -16,41 +16,41 @@ const fileTokens = require('./file-tokens.json');
 async function buildIcons (ns: string, resolution: number) {
   const icons = {
     'iconDefinitions': {
-      [`sundown.${ns}.folder`]: {
+      [`outro.${ns}.folder`]: {
         "iconPath": `./${ns}-${resolution}-Folder.svg`
       },
-      [`sundown.${ns}.project`]: {
+      [`outro.${ns}.project`]: {
         "iconPath": `./${ns}-${resolution}-Project.svg`
       },
-      [`sundown.${ns}.file`]: {
+      [`outro.${ns}.file`]: {
         "iconPath": `./${ns}-${resolution}-File.svg`
       },
-      [`sundown.${ns}.archive`]: {
+      [`outro.${ns}.archive`]: {
         "iconPath": `./${ns}-${resolution}-Archive.svg`
       },
-      [`sundown.${ns}.package`]: {
+      [`outro.${ns}.package`]: {
         "iconPath": `./${ns}-${resolution}-Package.svg`
       }
     },
     'fileExtensions': {
-      'zip': `sundown.${ns}.archive`,
-      'rar': `sundown.${ns}.archive`,
-      'tar': `sundown.${ns}.archive`,
-      'sbx': `sundown.${ns}.archive`,
-      'gz': `sundown.${ns}.archive`,
-      'gzip': `sundown.${ns}.archive`,
-      '7z': `sundown.${ns}.archive`,
-      's7z': `sundown.${ns}.archive`
+      'zip': `outro.${ns}.archive`,
+      'rar': `outro.${ns}.archive`,
+      'tar': `outro.${ns}.archive`,
+      'sbx': `outro.${ns}.archive`,
+      'gz': `outro.${ns}.archive`,
+      'gzip': `outro.${ns}.archive`,
+      '7z': `outro.${ns}.archive`,
+      's7z': `outro.${ns}.archive`
     },
     "fileNames": {
-      'package.json': `sundown.${ns}.package`,
-      'Package.swift': `sundown.${ns}.package`
+      'package.json': `outro.${ns}.package`,
+      'Package.swift': `outro.${ns}.package`
     },
-    'rootFolder': `sundown.${ns}.project`,
-    'rootFolderExpanded': `sundown.${ns}.project`,
-    'folder': `sundown.${ns}.folder`,
-    'folderExpanded': `sundown.${ns}.folder`,
-    'file': `sundown.${ns}.file`
+    'rootFolder': `outro.${ns}.project`,
+    'rootFolderExpanded': `outro.${ns}.project`,
+    'folder': `outro.${ns}.folder`,
+    'folderExpanded': `outro.${ns}.folder`,
+    'file': `outro.${ns}.file`
   };
   const fileNames = [
     'Archive',
@@ -194,7 +194,7 @@ function merge (...items) {
 
 async function build() {
   // Color icons
-  const themeNames = ['color', 'dark'];
+  const themeNames = ['dark'];
   for (const name of themeNames) {
     const iconTheme = {};
     const icons = await buildIcons(name, 24);
@@ -203,8 +203,8 @@ async function build() {
         32, 
         32, 
         32, 
-        26, 
-        30);
+        19, 
+        26);
     merge(
       iconTheme, 
       icons,

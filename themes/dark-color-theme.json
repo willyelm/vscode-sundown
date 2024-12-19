@@ -7,7 +7,7 @@
 		"scope": "comment",
 		"settings": {
 			"fontStyle": "italic",
-			"foreground": "#636367"
+			"foreground": "#575757"
 		}
 	}, {
 		"name": "Foreground, Operator",
@@ -34,13 +34,13 @@
 			"markup.deleted.git_gutter"
 		],
 		"settings": {
-				"foreground": "#f2f2f6"
+				"foreground": "#e6e6e6"
 		}
 	}, {
 		"name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
 		"scope": "constant.numeric, constant.language, support.constant, constant.character, punctuation.section.embedded, keyword.other.unit",
 		"settings": {
-				"foreground": "#ffc0a2"
+				"foreground": "#f5c9b4"
 		}
 	},{
 		"name": "Class, Support",
@@ -52,7 +52,7 @@
 		],
 		"settings": {
 			"fontStyle": "",
-			"foreground": "#f8efbb"
+			"foreground": "#f6eec2"
 		}
 	}, {
 		"name": "String, Symbols, Inherited Class, Markup Heading, GitGutter inserted",
@@ -65,13 +65,13 @@
 		],
 		"settings": {
 				"fontStyle": "",
-				"foreground": "#afd3c6"
+				"foreground": "#c1e2d1"
 		}
 	}, {
 		"name": "Operator, Misc",
 		"scope": "keyword.operator, constant.other.color",
 		"settings": {
-				"foreground": "#ffffff",
+				"foreground": "#caeff8",
 				"fontStyle": "bold"
 		}
 	}, {
@@ -79,20 +79,28 @@
 		"scope": "entity.name.function, meta.function-call, support.function, keyword.other.special-method, meta.block-level, markup.changed.git_gutter",
 		"settings": {
 			"fontStyle": "",
-			"foreground": "#a2b0f3"
+			"foreground": "#b2b8f1"
 		}
 	}, {
 		"name": "Keyword, Storage",
 		"scope": [
 			"keyword", 
 			"storage", 
-			"storage.type",
+			"storage.type"
+		],
+		"settings": {
+			"fontStyle": "bold",
+			"foreground": "#f8f8f8"
+		}
+	}, {
+		"name": "Entities",
+		"scope": [
 			"entity.name.tag.css", 
 			"entity.name.tag"
 		],
 		"settings": {
 			"fontStyle": "bold",
-			"foreground": "#f0a3ba"
+			"foreground": "#f3aabc"
 		}
 	}, {
 		"name": "Invalid",
