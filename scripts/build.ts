@@ -16,41 +16,41 @@ const fileTokens = require('./file-tokens.json');
 async function buildIcons (ns: string, resolution: number) {
   const icons = {
     'iconDefinitions': {
-      [`outro.${ns}.folder`]: {
+      [`sundown.${ns}.folder`]: {
         "iconPath": `./${ns}-${resolution}-Folder.svg`
       },
-      [`outro.${ns}.project`]: {
+      [`sundown.${ns}.project`]: {
         "iconPath": `./${ns}-${resolution}-Project.svg`
       },
-      [`outro.${ns}.file`]: {
+      [`sundown.${ns}.file`]: {
         "iconPath": `./${ns}-${resolution}-File.svg`
       },
-      [`outro.${ns}.archive`]: {
+      [`sundown.${ns}.archive`]: {
         "iconPath": `./${ns}-${resolution}-Archive.svg`
       },
-      [`outro.${ns}.package`]: {
+      [`sundown.${ns}.package`]: {
         "iconPath": `./${ns}-${resolution}-Package.svg`
       }
     },
     'fileExtensions': {
-      'zip': `outro.${ns}.archive`,
-      'rar': `outro.${ns}.archive`,
-      'tar': `outro.${ns}.archive`,
-      'sbx': `outro.${ns}.archive`,
-      'gz': `outro.${ns}.archive`,
-      'gzip': `outro.${ns}.archive`,
-      '7z': `outro.${ns}.archive`,
-      's7z': `outro.${ns}.archive`
+      'zip': `sundown.${ns}.archive`,
+      'rar': `sundown.${ns}.archive`,
+      'tar': `sundown.${ns}.archive`,
+      'sbx': `sundown.${ns}.archive`,
+      'gz': `sundown.${ns}.archive`,
+      'gzip': `sundown.${ns}.archive`,
+      '7z': `sundown.${ns}.archive`,
+      's7z': `sundown.${ns}.archive`
     },
     "fileNames": {
-      'package.json': `outro.${ns}.package`,
-      'Package.swift': `outro.${ns}.package`
+      'package.json': `sundown.${ns}.package`,
+      'Package.swift': `sundown.${ns}.package`
     },
-    'rootFolder': `outro.${ns}.project`,
-    'rootFolderExpanded': `outro.${ns}.project`,
-    'folder': `outro.${ns}.folder`,
-    'folderExpanded': `outro.${ns}.folder`,
-    'file': `outro.${ns}.file`
+    'rootFolder': `sundown.${ns}.project`,
+    'rootFolderExpanded': `sundown.${ns}.project`,
+    'folder': `sundown.${ns}.folder`,
+    'folderExpanded': `sundown.${ns}.folder`,
+    'file': `sundown.${ns}.file`
   };
   const fileNames = [
     'Archive',
@@ -210,7 +210,7 @@ async function build() {
       icons,
       fileIcons
     );
-    const themePath = path.resolve(`fileicons/${name}-icon-theme.json`);
+    const themePath = path.resolve(`fileicons/${name}-icon.json`);
     await writeFile(themePath, JSON.stringify(iconTheme, null, 2));
   }
 }

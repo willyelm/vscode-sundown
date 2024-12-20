@@ -2,10 +2,10 @@
   "name": "sundown",
   "displayName": "Sundown Theme",
   "description": "The last minimalist theme you'll need",
-  "version": "0.0.17",
+  "version": "0.0.21",
   "publisher": "willyelm",
   "license": "MIT",
-  "author": "Williams Medina <williams.medinaa@gmail.com>",
+  "author": "Will Medina <williams.medinaa@gmail.com>",
   "engines": {
     "vscode": "^1.47.0"
   },
@@ -23,14 +23,14 @@
       {
         "label": "Dark (Sundown)",
         "uiTheme": "vs-dark",
-        "path": "./themes/dark-color-theme.json"
+        "path": "./themes/dark-color.json"
       }
     ],
     "iconThemes": [
       {
         "id": "sundown-dark",
         "label": "Dark (Sundown)",
-        "path": "./fileicons/dark-icon-theme.json"
+        "path": "./fileicons/dark-icon.json"
       }
     ]
   },
@@ -44,8 +44,8 @@
     "xml2js": "^0.4.23"
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-		"compile": "npm run compile:theme",
-    "compile:theme": "rm -Rf ./fileicons && mkdir -p ./fileicons && ts-node ./scripts/build"
+    "vscode:prepublish": "npm run build",
+		"build": "npm run build:theme",
+    "build:theme": "rm -Rf ./fileicons && mkdir -p ./fileicons && ts-node ./scripts/build"
   }
 }
