@@ -116,7 +116,7 @@
 		"checkbox.border": "#6B6B6B",
 		"editor.background": "#0c0c0c",
 		"editor.foreground": "#D4D4D4",
-		"editor.inactiveSelectionBackground": "#3A3D41",
+		"editor.inactiveSelectionBackground": "#3a3d41df",
 		"editorIndentGuide.background1": "#404040",
 		"editorIndentGuide.activeBackground1": "#707070",
 		"editor.selectionHighlightBackground": "#ADD6FF26",
