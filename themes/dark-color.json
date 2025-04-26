@@ -39,14 +39,14 @@
 				"markup.deleted.git_gutter"
 			],
 			"settings": {
-				"foreground": "#e6e6e6"
+				"foreground": "#f2f2f2"
 			}
 		},
 		{
 			"name": "Number, Constant, Function Argument, Tag Attribute, Embedded",
 			"scope": "constant.numeric, constant.language, support.constant, constant.character, punctuation.section.embedded, keyword.other.unit",
 			"settings": {
-				"foreground": "#f5c9b4"
+				"foreground": "#ebdf97"
 			}
 		},
 		{
@@ -59,7 +59,7 @@
 			],
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#fffbcb"
+				"foreground": "#d5bbfa"
 			}
 		},
 		{
@@ -73,7 +73,7 @@
 			],
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#c5f1da"
+				"foreground": "#f19180"
 			}
 		},
 		{
@@ -89,7 +89,7 @@
 			"scope": "meta.function-call, support.function, keyword.other.special-method, meta.block-level, markup.changed.git_gutter",
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#a7b3f9"
+				"foreground": "#ffffff"
 			}
 		},
 		{
@@ -101,7 +101,7 @@
 			],
 			"settings": {
 				"fontStyle": "bold",
-				"foreground": "#f8f8f8"
+				"foreground": "#f2f2f2"
 			}
 		},
 		{
@@ -111,8 +111,8 @@
 				"entity.name.tag"
 			],
 			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#f4afcb"
+				// "fontStyle": "bold",
+				"foreground": "#ee81b0"
 			}
 		},
 		{
