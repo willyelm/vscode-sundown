@@ -22,7 +22,7 @@
 				// "entity.name.function"
 			],
 			"settings": {
-				"foreground": "#ffffff"
+				"foreground": "#f2f2f2"
 			}
 		},
 		{
@@ -36,10 +36,11 @@
 				"meta.tag",
 				"variable.parameter",
 				"declaration.tag",
-				"markup.deleted.git_gutter"
+				"markup.deleted.git_gutter",
+				"entity.name.function"
 			],
 			"settings": {
-				"foreground": "#f2f2f2"
+				"foreground": "#e4e4e4"
 			}
 		},
 		{
@@ -59,37 +60,47 @@
 			],
 			"settings": {
 				"fontStyle": "",
-				"foreground": "#d5bbfa"
+				"foreground": "#cfb7f3"
 			}
 		},
+		// {
+		// 	"name": "Function, Special Method, Block Level, GitGutter changed",
+		// 	"scope": "meta.function-call, support.function, keyword.other.special-method, meta.block-level, markup.changed.git_gutter",
+		// 	"settings": {
+		// 		"fontStyle": "",
+		// 		"foreground": "#ab85e6"
+		// 	}
+		// },
 		{
 			"name": "String, Symbols, Inherited Class, Markup Heading, GitGutter inserted",
 			"scope": [
-				"string",
+				// "string",
+				"string.quoted",
 				"constant.other.symbol",
 				"entity.other.inherited-class",
 				"markup.heading",
 				"markup.inserted.git_gutter"
 			],
 			"settings": {
-				"fontStyle": "",
-				"foreground": "#f19180"
+				"foreground": "#ef8876"
 			}
 		},
+	{
+		"name": "Module",
+		"scope": [
+			"constant.other.module"
+		],
+		"settings": {
+			"foreground": "#FF0000",
+			"fontStyle": "bold"
+		}
+	},
 		{
 			"name": "Operator, Misc",
 			"scope": "keyword.operator, constant.other.color",
 			"settings": {
-				"foreground": "#caeff8",
+				"foreground": "#ffffff",
 				"fontStyle": "bold"
-			}
-		},
-		{
-			"name": "Function, Special Method, Block Level, GitGutter changed",
-			"scope": "meta.function-call, support.function, keyword.other.special-method, meta.block-level, markup.changed.git_gutter",
-			"settings": {
-				"fontStyle": "",
-				"foreground": "#ffffff"
 			}
 		},
 		{
@@ -97,22 +108,15 @@
 			"scope": [
 				"keyword",
 				"storage",
-				"storage.type"
-			],
-			"settings": {
-				"fontStyle": "bold",
-				"foreground": "#f2f2f2"
-			}
-		},
-		{
-			"name": "Entities",
-			"scope": [
+				"storage.type",
 				"entity.name.tag.css",
 				"entity.name.tag"
 			],
 			"settings": {
-				// "fontStyle": "bold",
-				"foreground": "#ee81b0"
+				// "foreground": "#ee81b0"
+				"foreground": "#ffffff",
+				"fontStyle": "bold"
+				// "fontStyle": "italic"
 			}
 		},
 		{
@@ -140,10 +144,10 @@
 		}
 	],
 	"semanticHighlighting": false,
-	"semanticTokenColors": {
-		"newOperator":"#C586C0",
-		"stringLiteral":"#ce9178",
-		"customLiteral": "#DCDCAA",
-		"numberLiteral": "#b5cea8",
-	}
+	// "semanticTokenColors": {
+	// 	"newOperator":"#C586C0",
+	// 	"stringLiteral":"#ce9178",
+	// 	"customLiteral": "#DCDCAA",
+	// 	"numberLiteral": "#b5cea8",
+	// }
 }
